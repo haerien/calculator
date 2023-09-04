@@ -1,12 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
 body{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     background: honeydew;
+    min-height: 100vh;
+}
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    font: 20px "Roboto", sans-serif;
+    margin-bottom: 10px;
 }
 
 #calculator{
     display: flex;
     flex-direction: column;
     width: 300px;
-    height: 450px;
+    height: 455px;
     background: #2e2e2e;
     border: 2px solid black;
     border-radius: 16px;
@@ -43,7 +67,7 @@ button{
     padding: 25px;
     border: 2px solid black;
     border-radius: 10px;
-    box-shadow: 1px 1px 1px black;
+    box-shadow: 1px 2px 2px black;
     flex:1;
     background: #4d4d4d;
     font-weight: bolder;
@@ -84,8 +108,7 @@ button{
     flex-direction: row;
 }
 
-main{
-    display: flex;
-    justify-content: center;
-    align-items: centerS;
+.github-logo{
+    width: 24px;
+    height: 24px;
 }
