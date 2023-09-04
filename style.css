@@ -10,6 +10,7 @@ body{
     background: #2e2e2e;
     border: 2px solid black;
     border-radius: 16px;
+    box-shadow: 3px 2px 5px;
     padding: 25px;
     align-items: center;
     gap:30px;
@@ -41,6 +42,7 @@ button{
     padding: 25px;
     border: 2px solid black;
     border-radius: 6px;
+    box-shadow: 1px 1px 1px black;
     flex:1;
     background: #4d4d4d;
     font-weight: bolder;
