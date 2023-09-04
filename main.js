@@ -24,6 +24,7 @@ dotButton.addEventListener("click", () => addDot());
 
 allButtons.forEach(button => button.addEventListener("mouseover", (e) => hoverAction(e)));
 allButtons.forEach(button => button.addEventListener("mouseleave", (e) => hoverAction(e)));
+window.addEventListener("keydown", (e) => handleKeyboardInput(e));
 
 let firstNum;
 let secondNum;
@@ -145,6 +146,14 @@ function roundNumber(number){
     return Math.round(number*1000)/1000;
 }
 
+function handleKeyboardInput(event){
+    const key = document.querySelector(`button[data-key="${event.code}"]`);
+
+    if(key.classList.contains("number")) appendNumber(key.textContent);
+    else if(key.classList.contains("operation")) setOperation(key.textContent);
+    else if(key.classList.contains("delete")) deleteLastEntry();
+    else addDot();
+}
 
 function hoverAction(e){
     if(e.type == "mouseover"){
