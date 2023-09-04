@@ -6,44 +6,52 @@
     <title>Calculator</title>
     <script src="./main.js" defer></script>
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/calculator">
 </head>
 <body>
-    <div id="calculator">
-        <div id="panel"></div>
-
-        <div id="buttons">
-            <div id = "numbers">
-                <div class = "row">    
-                    <button class="number">7</button>
-                    <button class="number">8</button>
-                    <button class="number">9</button>
-                </div>
-                <div class = "row">    
-                    <button class="number">4</button>
-                    <button class="number">5</button>
-                    <button class="number">6</button>
-                </div>
-                <div class = "row">    
-                    <button class="number">1</button>
-                    <button class="number">2</button>
-                    <button class="number">3</button>
-                </div>
-                <div class = "row">    
-                    <button class="number">0</button>
-                    <button class="dot">.</button>
-                </div>
+    <main class="main">
+        <div id="calculator">
+            <div id="panel">
+                <div class="top display"></div>
+                <div class="bottom display">0</div>
             </div>
+            
+            <div id="buttons">
+                <div class="ac_del">
+                    <button class="reset">AC</button>
+                    <button class="delete">DEL</button> 
+                </div>
 
-            <div id="operations">   
-                    <button class="operation">+</button>
-                    <button class="operation">-</button> 
-                    <button class="operation">*</button>
-                    <button class="operation">/</button>
+                <div class="container">
+                        <div class = "row">    
+                            <button class="number">7</button>
+                            <button class="number">8</button>
+                            <button class="number">9</button>
+                            <button class="operation">/</button>
+                        </div>
+                        <div class = "row">    
+                            <button class="number">4</button>
+                            <button class="number">5</button>
+                            <button class="number">6</button>
+                            <button class="operation">*</button> 
+                        </div>
+                        <div class = "row">    
+                            <button class="number">1</button>
+                            <button class="number">2</button>
+                            <button class="number">3</button>
+                            <button class="operation">-</button>
+                        </div>
+                        <div class = "row">    
+                            <button class="number">0</button>
+                            <button class="dot">.</button>
+                            <button class="operation">=</button>
+                            <button class="operation">+</button>
+                        </div>
+                    </div>
+                </div> 
             </div>
         </div>
-
-
-    </div>
-    
-</body>
-</html>
+    </main>
+        
+    </body>
+    </html>
