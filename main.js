@@ -6,6 +6,7 @@ function operate(a, operator, b){
         case "/": return a/b;
     }
 }
+const allButtons = document.querySelectorAll("button");
 const numberButtons = document.querySelectorAll(".number");
 const operationButtons = document.querySelectorAll(".operation");
 const resetButton = document.querySelector(".reset");
@@ -14,14 +15,17 @@ const deleteButton = document.querySelector(".delete");
 const topDisplay = document.querySelector(".top.display");
 const bottomDisplay = document.querySelector(".bottom.display");
 
-let firstNum;
-let secondNum;
-let operator;
-
 numberButtons.forEach(num => num.addEventListener("click", () => appendNumber(num.textContent)));
 operationButtons.forEach(operation => operation.addEventListener("click", () => setOperation(operation.textContent)));
 resetButton.addEventListener("click", () => resetAll());
 deleteButton.addEventListener("click", () => deleteLastEntry());
+
+allButtons.forEach(button => button.addEventListener("mouseover", (e) => hoverAction(e)));
+allButtons.forEach(button => button.addEventListener("mouseleave", (e) => hoverAction(e)));
+
+let firstNum;
+let secondNum;
+let operator;
 
 
 function add(a,b){
@@ -129,3 +133,12 @@ function deleteLastEntry(){
     }
 }
 
+
+function hoverAction(e){
+    if(e.type == "mouseover"){
+        e.target.classList.add("hover");
+    }
+    else{
+        e.target.classList.remove("hover");
+    }
+}
